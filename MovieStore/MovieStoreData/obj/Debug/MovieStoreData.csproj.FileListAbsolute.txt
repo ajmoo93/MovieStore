@@ -1,0 +1,11 @@
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\MovieStoreData.exe.config
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\MovieStoreData.exe
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\MovieStoreData.pdb
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\EntityFramework.dll
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\EntityFramework.xml
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.exe
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.pdb
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csprojResolveAssemblyReference.cache
+C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csproj.CoreCompileInputs.cache
