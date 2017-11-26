@@ -9,3 +9,7 @@ C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\ob
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.pdb
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csprojResolveAssemblyReference.cache
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csprojResolveAssemblyReference.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.exe
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStoreData\obj\Debug\MovieStoreData.pdb

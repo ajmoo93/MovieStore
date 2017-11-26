@@ -12,12 +12,12 @@ namespace MovieStoreData.Model
         public Guid RentalId { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime ReturnDate { get; set; }
-        [ForeignKey("Movie")]
+        
         public Guid MovieId { get; set; }
-        [ForeignKey("Person")]
+        
         public Guid PersonId { get; set; }
 
-        public Person Person { get; set; }
-        public Movie Movies { get; set; }
+        public virtual Person Person { get; set; }
+        public virtual Movie Movies { get; set; }
     }
 }

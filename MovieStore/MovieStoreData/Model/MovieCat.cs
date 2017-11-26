@@ -11,7 +11,7 @@ namespace MovieStoreData.Model
     {
         public Guid CategoryID { get; set; }
         public string CategoryName { get; set; }
-        [ForeignKey("Movie")]
+        
         public Guid MovieId { get; set; }
         public Movie Movies { get; set; }
     }

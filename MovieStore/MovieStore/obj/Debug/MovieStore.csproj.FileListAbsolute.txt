@@ -73,3 +73,7 @@ C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStore\obj\De
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStore\bin\EntityFramework.SqlServer.dll
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStore\bin\EntityFramework.SqlServer.xml
 C:\Users\Emil\documents\visual studio 2017\Projects\MovieStore\MovieStore\obj\Debug\MovieStore.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStore\obj\Debug\MovieStore.csprojResolveAssemblyReference.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStore\obj\Debug\MovieStore.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStore\obj\Debug\MovieStore.dll
+C:\Users\Emil\Documents\GitHub\MovieStore\MovieStore\MovieStore\obj\Debug\MovieStore.pdb

@@ -11,5 +11,7 @@ namespace MovieStoreData.DTO
         public Guid RentalId { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime ReturnDate { get; set; }
+
+        public virtual ICollection<MovieDTO> Movies { get; set; }
     }
 }

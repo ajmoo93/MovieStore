@@ -156,9 +156,11 @@
     </Compile>
     <Compile Include="Helper\MovieHelper.cs" />
     <Compile Include="Models\AccountViewModel.cs" />
+    <Compile Include="Models\CommentVeiwModel.cs" />
     <Compile Include="Models\MovieCatViewModel.cs" />
     <Compile Include="Models\MovieViewModel.cs" />
     <Compile Include="Models\PersonViewModel.cs" />
+    <Compile Include="Models\PictureViewModel.cs" />
     <Compile Include="Models\RentedViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

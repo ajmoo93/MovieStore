@@ -22,5 +22,9 @@ namespace MovieStore.Models
         public string Email { get; set; }
         [DataType(DataType.PhoneNumber)]
         public int MobileNumber { get; set; }
+        public Guid MovieId { get; set; }
+        public Guid RentalId { get; set; } 
+        public MovieViewModel Movie { get; set; }
+        public RentedViewModel MovieRental { get; set; }
     }
 }

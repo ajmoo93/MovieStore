@@ -13,5 +13,8 @@ namespace MovieStoreData.DTO
         public string Director { get; set; }
         public int RentalDuration { get; set; }
         public int MovieRating { get; set; }
+
+        public virtual ICollection<PictureDTO> Pictures { get; set; }
+        public virtual ICollection<CommentDTO> Comments { get; set; }
     }
 }

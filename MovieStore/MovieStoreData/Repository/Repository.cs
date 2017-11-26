@@ -18,7 +18,9 @@ namespace MovieStoreData.Repository
 
         public void CreateMovie(MovieDTO dto)
         {
-            var newMovie = new MovieDTO
+            using (var context = new MovieStoreDBContext())
+            {
+                var newMovie = new MovieDTO
             {
 
                 MovieId = Guid.NewGuid(),
@@ -27,8 +29,7 @@ namespace MovieStoreData.Repository
                 Director = dto.Director,
                 RentalDuration = dto.RentalDuration,
             };
-            using (var context = new MovieStoreDBContext())
-            {
+            
                 context.Movies.Add(newMovie);
                 context.SaveChanges();
             }
@@ -53,7 +54,17 @@ namespace MovieStoreData.Repository
             }
         }
 
+        public void DeleteAccount(Guid AccountId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteMovie(MovieDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteMovie(Guid MovieId)
         {
             throw new NotImplementedException();
         }

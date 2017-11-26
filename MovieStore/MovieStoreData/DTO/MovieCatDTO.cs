@@ -8,7 +8,9 @@ namespace MovieStoreData.DTO
 {
     public class MovieCatDTO
     {
-        public Guid CategoryID { get; set; }
+        public Guid CategoryId { get; set; }
         public string CategoryName { get; set; }
+
+        public virtual ICollection<MovieDTO> Movies { get; set; }
     }
 }

@@ -50,15 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\CommentDTO.cs" />
     <Compile Include="DTO\MovieCatDTO.cs" />
     <Compile Include="DTO\MovieDTO.cs" />
     <Compile Include="DTO\PersonDTO.cs" />
+    <Compile Include="DTO\PictureDTO.cs" />
     <Compile Include="DTO\RentedDTO.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\MovieCat.cs" />
     <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Picture.cs" />
     <Compile Include="Model\RentedMovie.cs" />
     <Compile Include="MovieStoreDBContext.cs" />
     <Compile Include="Program.cs" />

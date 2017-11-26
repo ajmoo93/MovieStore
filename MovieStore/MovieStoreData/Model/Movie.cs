@@ -13,8 +13,9 @@ namespace MovieStoreData.Model
         public string Director { get; set; }
         public int RentalDuration { get; set; }
         public int MovieRating { get; set; }
+        public int MovieCatId { get; set; }
 
 
-        public MovieCat MovieCat { get; set; }
+        public virtual MovieCat MovieCats { get; set; }
     }
 }

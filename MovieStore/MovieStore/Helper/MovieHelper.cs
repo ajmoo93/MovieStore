@@ -10,19 +10,22 @@ namespace MovieStore.Helper
 {
     public class MovieHelper
     {
-        public static ICollection<MovieViewModel> MovieHelperMapper(ICollection<Movie> movies)
-        {
-            var result = new List<MovieViewModel>();
-            movies.ToList().ForEach(x => result.Add(MovieHelperMapper(x)));
-            return result;
-        }
-        public static ICollection<Movie> moviehelpermapper(ICollection<MovieViewModel> movies)
-        {
-            var result = new List<Movie>();
-            movies.ToList().ForEach(x => result.Add(moviehelpermapper(x)));
-            return result;
-        }
-        public static MovieViewModel MovieHelperMapper(MovieDTO movie)
+        //public static ICollection<MovieViewModel> MovieHelperMapper(ICollection<Movie> movies)
+        //{
+        //    var result = new List<MovieViewModel>();
+        //    movies.ToList().ForEach(x => result.Add(MovieHelperMapper(x)));
+        //    return result;
+        //}
+        
+        //public static ICollection<Movie> MovieHelperModel(ICollection<MovieViewModel> movies)
+        //{
+        //    var result = new List<Movie>();
+        //    movies.ToList().ForEach(x => result.Add(MovieHelperModel(x)));
+        //    return result;
+        //}
+       
+       
+        public static MovieViewModel MovieHelperMapper(Movie movie)
         {
             var movieModel = new MovieViewModel
             {
@@ -35,9 +38,9 @@ namespace MovieStore.Helper
             return movieModel;
 
         }
-        public static MovieDTO MovieHelperModel(MovieViewModel movie)
+        public static Movie MovieHelperModel(MovieViewModel movie)
         {
-            var movieHelper = new MovieDTO
+            var movieHelper = new Movie
             {
                 MovieId = movie.MovieId,
                 MovieTitle = movie.MovieTitle,

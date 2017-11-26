@@ -17,6 +17,9 @@ namespace MovieStoreData.Model
         public string Adress { get; set; }
         public string Email { get; set; }
         public int MobileNumber { get; set; }
-        public virtual Account Account { get; set; }
+        public int MovieId { get; set; }
+
+        public ICollection<Movie> Movies { get; set; }
+        public ICollection<RentedMovie> MovieRents { get; set; }
     }
 }

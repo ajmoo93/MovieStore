@@ -8,7 +8,7 @@ namespace MovieStoreData.DTO
 {
     public class PersonDTO
     {
-        public Guid PersonID { get; set; }
+        public Guid PersonId { get; set; }
 
         public int PersonNumber { get; set; }
 
@@ -21,5 +21,8 @@ namespace MovieStoreData.DTO
         public string Email { get; set; }
 
         public int MobileNumber { get; set; }
+
+        public virtual ICollection<RentedDTO> MovieRents { get; set; }
+        public virtual ICollection<MovieDTO> Movies { get; set; }
     }
 }
