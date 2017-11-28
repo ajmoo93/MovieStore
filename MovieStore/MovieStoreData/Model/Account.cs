@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,13 @@ namespace MovieStoreData.Model
 {
     public class Account
     {
-        public int AccountID { get; set; }
+        [Key]
+        public Guid AccountId { get; set; }
         public string Email { get; set; }
         public string Psw { get; set; }
         /*Account have many person */
         [ForeignKey("Person")]
-        public int PersonId { get; set; }
-        public virtual Person person { get; set; }
+        public Guid PersonId { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

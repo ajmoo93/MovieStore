@@ -25,7 +25,7 @@ namespace MovieStore.Helper
         //}
        
        
-        public static MovieViewModel MovieHelperMapper(Movie movie)
+        public static MovieViewModel EntityToModel(Movie movie)
         {
             var movieModel = new MovieViewModel
             {
@@ -38,7 +38,7 @@ namespace MovieStore.Helper
             return movieModel;
 
         }
-        public static Movie MovieHelperModel(MovieViewModel movie)
+        public static Movie ModelToEntity(MovieViewModel movie)
         {
             var movieHelper = new Movie
             {

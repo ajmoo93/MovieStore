@@ -16,6 +16,7 @@ namespace MovieStoreData
         public DbSet<RentedMovie> RentedMovies { get; set; }
         public DbSet<Person> Persons { get; set; }
 
+        
        
     }
 }

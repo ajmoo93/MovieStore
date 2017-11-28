@@ -16,11 +16,11 @@ namespace MovieStoreData.Repository
             throw new NotImplementedException();
         }
 
-        public void CreateMovie(MovieDTO dto)
+        public void CreateMovie(Movie dto)
         {
             using (var context = new MovieStoreDBContext())
             {
-                var newMovie = new MovieDTO
+                var newMovie = new Movie
             {
 
                 MovieId = Guid.NewGuid(),
@@ -30,7 +30,7 @@ namespace MovieStoreData.Repository
                 RentalDuration = dto.RentalDuration,
             };
             
-                context.Movies.Add(newMovie);
+                context.Movies.Add(newMovie);   
                 context.SaveChanges();
             }
         }
@@ -89,6 +89,11 @@ namespace MovieStoreData.Repository
                 }
                 context.SaveChanges();
             }
+        }
+
+        public void EditMovie(Movie dto)
+        {
+            throw new NotImplementedException();
         }
 
         public ICollection<Movie> GetMovie()

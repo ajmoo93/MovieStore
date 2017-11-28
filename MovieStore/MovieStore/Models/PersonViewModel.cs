@@ -8,7 +8,8 @@ namespace MovieStore.Models
 {
     public class PersonViewModel
     {
-        public Guid PersonID { get; set; }
+        [Key]
+        public Guid PersonId { get; set; }
         [Required]
         public int PersonNumber { get; set; }
         [Required]

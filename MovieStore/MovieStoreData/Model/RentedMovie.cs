@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace MovieStoreData.Model
 {
     public class RentedMovie
     {
+        [Key]
         public Guid RentalId { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime ReturnDate { get; set; }

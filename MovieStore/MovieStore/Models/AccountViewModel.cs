@@ -8,7 +8,7 @@ namespace MovieStore.Models
 {
     public class AccountViewModel
     {
-        public int AccountID { get; set; }
+        public int AccountId { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

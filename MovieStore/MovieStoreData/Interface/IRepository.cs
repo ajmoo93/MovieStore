@@ -26,8 +26,8 @@ namespace MovieStoreData.Interface
         void CreateAccount(AccountDTO dto);
         void EditAccount(AccountDTO dto);
         void DeleteAccount(Guid AccountId);
-        void CreateMovie(MovieDTO dto);
-        void EditMovie(MovieDTO dto);
+        void CreateMovie(Movie dto);
+        void EditMovie(Movie dto);
         void DeleteMovie(Guid MovieId);
         IEnumerable<MovieDTO> GetMovie(Guid id);
     }

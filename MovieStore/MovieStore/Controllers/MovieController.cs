@@ -21,6 +21,19 @@ namespace MovieStore.Controllers
         // GET: Movie
         public ActionResult Index()
         {
+           //lista av movieViewModel
+            var movies = new List<MovieViewModel>();
+            //kallar på alla movies
+            var moviesFromDB = repo.GetMovie();
+            //om movies finns så skicka ut dem
+            if(moviesFromDB != null)
+            {
+                foreach(var movie in moviesFromDB)
+                {
+                    var movieToAdd = MovieHelper.EntityToModel(movie);
+                    movies.Add(movieToAdd);
+                }
+            }
             return View();
         }
         public ActionResult MovieCreate()
@@ -33,10 +46,11 @@ namespace MovieStore.Controllers
             //om movieState är valid
             if (ModelState.IsValid)
             {
+                
                 //mappar vi movies för att få dem
-                repo.CreateMovie(MovieHelper.MovieHelperModel(movies));
+                repo.CreateMovie(MovieHelper.ModelToEntity(movies));
                 //sen skickas vi till home och visar filmerna
-                return PartialView("Home", MovieHelper.MovieHelperMapper(repo.GetMovie()));
+                return PartialView("Home");
             }
             return PartialView("CreateMovie", movies);
             //movies.MovieId = Guid.NewGuid();
@@ -55,9 +69,9 @@ namespace MovieStore.Controllers
         public ActionResult EditMovie(MovieViewModel movie)
         {
             //först så mappar vi om movie
-            repo.EditMovie(MovieHelper.MovieHelperModel(movie));
+            repo.EditMovie(MovieHelper.ModelToEntity(movie));
             //skickar till Home och visar filmerna.
-            return PartialView("Home", MovieHelper.MovieHelperMapper(repo.GetMovie()));
+            return PartialView("Home", "Movie");
         }
         public ActionResult DeleteMovie()
         {

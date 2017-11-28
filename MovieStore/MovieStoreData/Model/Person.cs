@@ -10,14 +10,14 @@ namespace MovieStoreData.Model
     public class Person
     {
         [Key]
-        public Guid PersonID { get; set; }
+        public Guid PersonId { get; set; }
         public int PersonNumber { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Adress { get; set; }
         public string Email { get; set; }
         public int MobileNumber { get; set; }
-        public int MovieId { get; set; }
+        public Guid MovieId { get; set; }
 
         public ICollection<Movie> Movies { get; set; }
         public ICollection<RentedMovie> MovieRents { get; set; }

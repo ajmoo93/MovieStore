@@ -9,14 +9,15 @@ namespace MovieStore.Models
 {
     public class CommentVeiwModel
     {
-        public int id { get; set; }
+        [Key]
+        public Guid id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
         [DataType(DataType.MultilineText)]
         public string Text { get; set; }
-        public int PersonId { get; set; }
-        public int MovieId { get; set; }
+        public Guid PersonId { get; set; }
+        public Guid MovieId { get; set; }
 
         [Display(Name ="Posted")]
         public DateTime DatePosted { get; set; }
