@@ -18,6 +18,8 @@ namespace MovieStoreData.Model
         public Guid MovieCatId { get; set; }
 
 
-        public virtual MovieCat MovieCats { get; set; }
+        public virtual MovieCat MovieCat { get; set; }
+        public virtual ICollection<Picture> Pictures { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

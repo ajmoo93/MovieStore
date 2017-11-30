@@ -98,7 +98,12 @@ namespace MovieStoreData.Repository
 
         public ICollection<Movie> GetMovie()
         {
-            throw new NotImplementedException();
+            using(var context = new MovieStoreDBContext())
+            {
+                var movie = context.Movies;
+                return movie.ToList();
+                
+            }
         }
 
         public IEnumerable<MovieDTO> GetMovie(Guid id)

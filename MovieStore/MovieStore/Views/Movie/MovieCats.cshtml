@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MovieStore.Models.MovieCatViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @Html.EnumDropDownListFor(x => x.)
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieCatId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieCatId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieCatId })
+        </td>
+    </tr>
+}
+
+</table>

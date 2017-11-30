@@ -34,7 +34,7 @@ namespace MovieStore.Controllers
                     movies.Add(movieToAdd);
                 }
             }
-            return View();
+            return View("Movie", "Movie");
         }
         public ActionResult MovieCreate()
         {
@@ -50,7 +50,7 @@ namespace MovieStore.Controllers
                 //mappar vi movies för att få dem
                 repo.CreateMovie(MovieHelper.ModelToEntity(movies));
                 //sen skickas vi till home och visar filmerna
-                return PartialView("Home");
+                return PartialView("Movie", "Movie");
             }
             return PartialView("CreateMovie", movies);
             //movies.MovieId = Guid.NewGuid();
@@ -71,7 +71,7 @@ namespace MovieStore.Controllers
             //först så mappar vi om movie
             repo.EditMovie(MovieHelper.ModelToEntity(movie));
             //skickar till Home och visar filmerna.
-            return PartialView("Home", "Movie");
+            return PartialView("Movie", "Movie");
         }
         public ActionResult DeleteMovie()
         {

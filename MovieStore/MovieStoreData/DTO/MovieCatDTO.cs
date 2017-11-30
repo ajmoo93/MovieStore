@@ -9,9 +9,22 @@ namespace MovieStoreData.DTO
 {
     public class MovieCatDTO
     {
+        public enum CategoryName
+        {
+            Horror,
+            Commedy,
+            Thriller,
+            Animated,
+            Documentary,
+            Action,
+            Drama,
+            Romantic,
+            Scifi,
+
+        }
         [Key]
         public Guid MovieCatId { get; set; }
-        public string CategoryName { get; set; }
+        public CategoryName Name { get; set; }
 
         public Guid MovieId { get; set; }
         public virtual ICollection<MovieDTO> Movies { get; set; }
