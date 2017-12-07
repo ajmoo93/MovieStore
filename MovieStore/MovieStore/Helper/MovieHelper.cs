@@ -31,6 +31,7 @@ namespace MovieStore.Helper
             {
                 MovieId = movie.MovieId,
                 MovieTitle = movie.MovieTitle,
+                Category = movie.Category,
                 Director = movie.Director,
                 RentalDuration = movie.RentalDuration,
                 MovieRating = movie.MovieRating,
@@ -44,6 +45,7 @@ namespace MovieStore.Helper
             {
                 MovieId = movie.MovieId,
                 MovieTitle = movie.MovieTitle,
+                Category = movie.Category,
                 Director = movie.Director,
                 MovieRating = movie.MovieRating,
                 RentalDuration = movie.RentalDuration,

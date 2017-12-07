@@ -13,12 +13,13 @@ namespace MovieStoreData.Model
         public Guid MovieId { get; set; }
         public string MovieTitle { get; set; }
         public string Director { get; set; }
+        public string Category { get; set; }
         public int RentalDuration { get; set; }
         public int MovieRating { get; set; }
-        public Guid MovieCatId { get; set; }
+       
 
 
-        public virtual MovieCat MovieCat { get; set; }
+        
         public virtual ICollection<Picture> Pictures { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
     }

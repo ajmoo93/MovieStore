@@ -22,13 +22,13 @@ namespace MovieStoreData.Interface
         //och det är bra för att koden blir bygg i så kallas best practices, att följa 
         //vanliga mönster.
         void CreatePerson(PersonDTO dto);
-        ICollection<Movie> GetMovie();
+        
         void CreateAccount(AccountDTO dto);
         void EditAccount(AccountDTO dto);
-        void DeleteAccount(Guid AccountId);
+        void DeleteAccount(Guid accountId);
         void CreateMovie(Movie dto);
         void EditMovie(Movie dto);
-        void DeleteMovie(Guid MovieId);
-        IEnumerable<MovieDTO> GetMovie(Guid id);
+        void DeleteMovie(Guid movieId);
+        IEnumerable<Movie> GetMovie();
     }
 }

@@ -9,7 +9,7 @@ using MovieStoreData.Model;
 
 namespace MovieStoreData.Repository
 {
-   public class Repository : IRepository
+    public class Repository : IRepository
     {
         public void CreateAccount(AccountDTO dto)
         {
@@ -21,16 +21,17 @@ namespace MovieStoreData.Repository
             using (var context = new MovieStoreDBContext())
             {
                 var newMovie = new Movie
-            {
+                {
 
-                MovieId = Guid.NewGuid(),
-                MovieTitle = dto.MovieTitle,
-                MovieRating = dto.MovieRating,
-                Director = dto.Director,
-                RentalDuration = dto.RentalDuration,
-            };
-            
-                context.Movies.Add(newMovie);   
+                    MovieId = Guid.NewGuid(),
+                    MovieTitle = dto.MovieTitle,
+                    Category = dto.Category,
+                    MovieRating = dto.MovieRating,
+                    Director = dto.Director,
+                    RentalDuration = dto.RentalDuration,
+                };
+
+                context.Movies.Add(newMovie);
                 context.SaveChanges();
             }
         }
@@ -42,10 +43,10 @@ namespace MovieStoreData.Repository
 
         public void DeleteAccount(AccountDTO accountId)
         {
-            using(var context = new MovieStoreDBContext())
+            using (var context = new MovieStoreDBContext())
             {
                 var AccountDelete = context.Accounts.Find(accountId);
-                    if (AccountDelete != null) context.Accounts.Remove(AccountDelete);
+                if (AccountDelete != null) context.Accounts.Remove(AccountDelete);
 
                 //var AccountD = context.Accounts.FirstOrDefault(x => x.AccountID == accountId.AccountID);
                 //context.Accounts.Remove(AccountD);
@@ -54,7 +55,7 @@ namespace MovieStoreData.Repository
             }
         }
 
-        public void DeleteAccount(Guid AccountId)
+        public void DeleteAccount(Guid accountId)
         {
             throw new NotImplementedException();
         }
@@ -64,9 +65,18 @@ namespace MovieStoreData.Repository
             throw new NotImplementedException();
         }
 
-        public void DeleteMovie(Guid MovieId)
+        public void DeleteMovie(Guid movieId)
         {
-            throw new NotImplementedException();
+            using (var context = new MovieStoreDBContext())
+            {
+                //ska du göra where så får du ha firstOrDefault i slutet av lambdan
+                //kalla på context movies och Lambda metod som kolla movieId
+                var moviesToDelete = context.Movies.Find(movieId);
+                //context movie removie movieToDelete
+                context.Movies.Remove(moviesToDelete);
+                context.SaveChanges();
+
+            }
         }
 
         public void EditAccount(AccountDTO dto)
@@ -78,17 +88,19 @@ namespace MovieStoreData.Repository
         {
             using (var context = new MovieStoreDBContext())
             {
+
                 var MovieToEdit = context.Movies.Find(dto.MovieId);
 
-                if(MovieToEdit != null)
+                if (MovieToEdit != null)
                 {
                     MovieToEdit.MovieTitle = dto.MovieTitle;
                     MovieToEdit.Director = dto.Director;
                     MovieToEdit.RentalDuration = dto.RentalDuration;
-                    context.Entry(MovieToEdit).State = System.Data.Entity.EntityState.Modified;
+                    context.SaveChanges();
+
                 }
-                context.SaveChanges();
             }
+
         }
 
         public void EditMovie(Movie dto)
@@ -96,19 +108,20 @@ namespace MovieStoreData.Repository
             throw new NotImplementedException();
         }
 
-        public ICollection<Movie> GetMovie()
+
+        //I enumerable är bra till om du bara ska iterera igenom listan( visa listan av objekt)
+        //ICollection är för om du skall Iterera listan och modifiera objekt iden.
+        //List<T> för om du skall iterera, modifiera och sortera.
+        public IEnumerable<Movie> GetMovie()
         {
-            using(var context = new MovieStoreDBContext())
+            using (var context = new MovieStoreDBContext())
             {
                 var movie = context.Movies;
                 return movie.ToList();
-                
+
             }
         }
 
-        public IEnumerable<MovieDTO> GetMovie(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

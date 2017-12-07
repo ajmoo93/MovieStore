@@ -13,11 +13,12 @@ namespace MovieStoreData.DTO
         public Guid MovieId { get; set; }
         public string MovieTitle { get; set; }
         public string Director { get; set; }
+        public string Category { get; set; }
         public int RentalDuration { get; set; }
         public int MovieRating { get; set; }
-        public Guid MovieCatId { get; set; }
+        
 
-        public virtual MovieCatDTO MovieCat { get; set; }
+        
 
         public virtual ICollection<PictureDTO> Pictures { get; set; }
         public virtual ICollection<CommentDTO> Comments { get; set; }

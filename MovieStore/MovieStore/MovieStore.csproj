@@ -203,8 +203,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Account.cshtml" />
     <Content Include="Views\Movie\MovieCreate.cshtml" />
-    <Content Include="Views\Movie\Movie.cshtml" />
     <Content Include="Views\Movie\MovieCats.cshtml" />
+    <Content Include="Views\Movie\ShowMovies.cshtml" />
+    <Content Include="Views\Movie\EditMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

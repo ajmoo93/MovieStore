@@ -8,29 +8,17 @@ using System.Threading.Tasks;
 
 namespace MovieStoreData.Model
 {
-    public class MovieCat
-    {
-        public enum CategoryName
-        {
-            Horror,
-            Commedy,
-            Thriller,
-            Animated,
-            Documentary,
-            Action,
-            Drama,
-            Romantic,
-            Scifi,
-
-        }
-        [Key]
-        public Guid MovieCatId { get; set; }
-        public CategoryName Name { get; set; }
+    //public class MovieCat
+    //{
+  
+    //    [Key]
+    //    public Guid MovieCatId { get; set; }
+    //    public string CategoryName { get; set; }
        
         
-        public Guid MovieId { get; set; }
-        public virtual Movie Movie { get; set; }
-        public virtual ICollection<Movie> Movies { get; set; }
+    //    public Guid MovieId { get; set; }
+    //    public virtual Movie Movie { get; set; }
+    //    public virtual ICollection<Movie> Movies { get; set; }
 
-    }
+    //}
 }

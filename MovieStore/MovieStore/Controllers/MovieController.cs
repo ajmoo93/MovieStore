@@ -10,6 +10,9 @@ using System.Web.Mvc;
 
 namespace MovieStore.Controllers
 {
+    //Ändra Modellerna så att category finns i Movie istället eller ta bort enum
+    //kolla varför movie har 3 movieCatID
+    //
     public class MovieController : Controller
     {
         private readonly IRepository repo;
@@ -19,7 +22,7 @@ namespace MovieStore.Controllers
             repo = new Repository();
         }
         // GET: Movie
-        public ActionResult Index()
+        public ActionResult ShowMovies()
         {
            //lista av movieViewModel
             var movies = new List<MovieViewModel>();
@@ -32,9 +35,10 @@ namespace MovieStore.Controllers
                 {
                     var movieToAdd = MovieHelper.EntityToModel(movie);
                     movies.Add(movieToAdd);
+                    
                 }
             }
-            return View("Movie", "Movie");
+            return View(movies);
         }
         public ActionResult MovieCreate()
         {
@@ -50,9 +54,9 @@ namespace MovieStore.Controllers
                 //mappar vi movies för att få dem
                 repo.CreateMovie(MovieHelper.ModelToEntity(movies));
                 //sen skickas vi till home och visar filmerna
-                return PartialView("Movie", "Movie");
+                return PartialView("ShowMovies");
             }
-            return PartialView("CreateMovie", movies);
+            return PartialView(movies);
             //movies.MovieId = Guid.NewGuid();
             //movies.MovieTitle = movies.MovieTitle;
             //movies.Director = movies.Director;
@@ -66,16 +70,25 @@ namespace MovieStore.Controllers
         {
             return PartialView();
         }
+        [HttpPost]
         public ActionResult EditMovie(MovieViewModel movie)
         {
             //först så mappar vi om movie
             repo.EditMovie(MovieHelper.ModelToEntity(movie));
             //skickar till Home och visar filmerna.
-            return PartialView("Movie", "Movie");
+            return PartialView("ShowMovies");
         }
-        public ActionResult DeleteMovie()
+       
+        [HttpDelete]
+        public ActionResult DeleteMovie(Guid Id)
         {
-            return View();
+            if(Id != null)
+            {
+                repo.DeleteMovie(Id);
+            }
+           
+            
+            return View("ShowMovie");
         }
     }
 }

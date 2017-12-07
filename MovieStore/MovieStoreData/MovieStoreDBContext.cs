@@ -12,7 +12,7 @@ namespace MovieStoreData
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<MovieCat> MovieCategories { get; set; }
+       
         public DbSet<RentedMovie> RentedMovies { get; set; }
         public DbSet<Person> Persons { get; set; }
 

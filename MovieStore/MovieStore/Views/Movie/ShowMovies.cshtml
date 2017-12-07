@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MovieStore.Models.MovieViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "MovieCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieRating)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieRating)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "EditMovie", new { id=item.MovieId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieId }) |
+            @Html.ActionLink("Delete", "DeleteMovie", new { id = item.MovieId } )
+        </td>
+    </tr>
+}
+
+</table>
